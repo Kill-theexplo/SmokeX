@@ -41,7 +41,7 @@ st.caption("พูดคุยเรื่องบุหรี่")
 # ==================================================
 
 client = OpenAI(
-    api_key="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",
+    api_key="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",
     base_url="https://openrouter.ai/api/v1",
 )
 
