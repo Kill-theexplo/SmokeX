@@ -86,8 +86,9 @@ def predict_future():
 for msg in st.session_state.messages:
     if msg["role"] == "system":
         continue
-    with st.chat_message(msg["role"]):
-        st.write(msg["content"])
+    if msg["role"] == "assistant":
+        with st.chat_message(msg["role"], avatar='🚭'):
+            st.write(msg["content"])
 
 user_input = st.chat_input("ถาม SmokeX สิ...")
 
@@ -97,7 +98,7 @@ if user_input:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar="🚭"):
         with st.spinner("SmokeX กำลังคิด..."):
             reply = generate_message()
             time.sleep(1)
@@ -109,9 +110,15 @@ if user_input:
 # RESET
 # ==================================================
 
-if st.button("🔄 Reset chat"):
-    st.session_state.clear()
+def reset_chat():
+    st.session_state.messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "assistant", "content": WELCOME_MESSAGE},
+    ]
     st.rerun()
+
+if st.button("🔄"):
+    reset_chat()
 
 # ==================================================
 # DIALOGS
