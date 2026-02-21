@@ -132,11 +132,11 @@ FACTS_OF_SMOKING = [
 # ----------------------------
 st.set_page_config(
     page_title="รู้วันละนิด",
-    page_icon=r"C:\Users\Lenovo\Desktop\AI\icon.png",
+    page_icon=r"icon.png",
     layout="centered"
 )
 
-st.logo(r"C:\Users\Lenovo\Desktop\AI\icon.png")
+st.logo(r"icon.png")
 
 def getRandomFact():
     random.seed(getCurrentDate())
@@ -145,5 +145,6 @@ def getRandomFact():
 st.markdown(f"### ความรู้ประจำวัน", text_alignment="center")
 st.markdown("\n")
 st.markdown(f"## :orange[{getRandomFact()}]", text_alignment="center")
+
 
 st.image("https://media.tenor.com/oUbEFIhufq4AAAAi/meme-emoji.gif", use_container_width=True)
