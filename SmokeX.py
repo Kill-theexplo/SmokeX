@@ -139,7 +139,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.logo(r"C:\Users\Lenovo\Desktop\AI\icon.png")
+st.logo(r"icon.png")
 st.title("SmokeX" ,text_alignment="left")
 st.caption("")
 
