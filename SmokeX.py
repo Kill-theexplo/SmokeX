@@ -135,7 +135,7 @@ FACTS_OF_SMOKING = [
 
 st.set_page_config(
     page_title="SmokeX",
-    page_icon=r"C:\Users\Lenovo\Desktop\AI\icon.png",
+    page_icon=r"icon.png",
     layout="centered"
 )
 
@@ -206,10 +206,10 @@ for msg in st.session_state.messages:
     if msg["role"] == "system":
         continue
     if msg["role"] == "assistant":
-        with st.chat_message(msg["role"], avatar=r"C:\Users\Lenovo\Desktop\AI\icon.png"):
+        with st.chat_message(msg["role"], avatar=r"icon.png"):
             st.write(msg["content"])
     if msg["role"] == "user":
-        with st.chat_message("user", avatar=r"C:\Users\Lenovo\Desktop\AI\userIcon.png"):
+        with st.chat_message("user", avatar=r"userIcon.png"):
             st.markdown(msg["content"])
 
 
@@ -218,10 +218,10 @@ user_input = st.chat_input("ถาม SmokeX สิ...")
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
 
-    with st.chat_message("user", avatar=r"C:\Users\Lenovo\Desktop\AI\userIcon.png"):
+    with st.chat_message("user", avatar=r"userIcon.png"):
         st.markdown(user_input)
 
-    with st.chat_message("assistant", avatar=r"C:\Users\Lenovo\Desktop\AI\icon.png"):
+    with st.chat_message("assistant", avatar=r"icon.png"):
         with st.spinner("SmokeX กำลังคิด..."):
             reply = generate_message()
             time.sleep(1)
