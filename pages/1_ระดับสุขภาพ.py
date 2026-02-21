@@ -35,10 +35,10 @@ client = OpenAI(
 # ----------------------------
 st.set_page_config(
     page_title="ระดับสุขภาพ",
-    page_icon=r"C:\Users\Lenovo\Desktop\AI\icon.png",
+    page_icon=r"icon.png",
 )
 
-st.logo(r"C:\Users\Lenovo\Desktop\AI\icon.png")
+st.logo(r"icon.png")
 
 # ----------------------------
 # Title
@@ -145,4 +145,5 @@ def result_dialog():
 if st.session_state.dialog_stage == 1:
     survey_dialog()
 elif st.session_state.dialog_stage == 2:
+
     result_dialog()
