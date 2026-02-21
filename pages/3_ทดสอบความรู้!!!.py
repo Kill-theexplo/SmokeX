@@ -35,10 +35,10 @@ client = OpenAI(
 # ----------------------------
 st.set_page_config(
     page_title="ทดสอบความรู้ของคุณหน่อย",
-    page_icon=r"C:\Users\Lenovo\Desktop\AI\icon.png",
+    page_icon=r"icon.png",
 )
 
-st.logo(r"C:\Users\Lenovo\Desktop\AI\icon.png")
+st.logo(r"icon.png")
 
 def check_answer():
     correct_answers = [q["a"] for q in QUESTIONS]
@@ -138,4 +138,5 @@ def after_test():
 if st.session_state.test_stage == 1:
     test_exam()
 elif st.session_state.test_stage == 2:
+
     after_test()
