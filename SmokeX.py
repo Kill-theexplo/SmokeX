@@ -15,7 +15,7 @@ SYSTEM_PROMPT = "You're Thai AI named SmokerX, your purpose is to give knowledge
             Maybe put a little joke that's not offensive and hurt feelings. A funny joke that's real and relatable, helping them. \
                         If the conversation is starting to dry out, you need to start asking questions, test their knowledge then give the answers."
 
-WELCOME_MESSAGE = "ถ้าเธอแน่จริงก็ถามมาสิ ถามมาเลย ความรู้น่ะ!!! ฉันตอบได้ทุกคำถาม (มั้งนะ)"
+WELCOME_MESSAGE = "คำถามที่คุณมีเกี่ยวกับบุหรี่และโทษของมัน คุณถามฉันมาได้เลย"
 
 FACTS_OF_SMOKING = [
     "การสูบบุหรี่เพิ่มความเสี่ยงมะเร็งปอด",
